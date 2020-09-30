@@ -3,8 +3,8 @@
 
 I made a job matching algorithm for xLearn. 
 This algorithm uses a database they developed (data_clean.json).
-An entry looks like something like this: \\
-'''
+An entry looks like something like this: 
+
 {
   "key_shared_job": 0,
   "Secteur": "Numérique",
@@ -16,18 +16,18 @@ An entry looks like something like this: \\
   "key_competency": "0",
   "key_sub-competency": "1"
 }
-'''
+
 As you can notice, a job has some competencies and some sub-competencies.
 To match jobs we relied on the following assumption: "two jobs are close to each other if they have a lot of competencies and sub-competencies in common".
 It allowed us to create a metric that tells how close is one job to another. I thought using AI techniques for this problem would have been overkill, since this metric provides very good results.
 
 ## -- Example of result
 
-Entry : 'Toxicologue industriel' \\
-Results : \\
-Best : ('Écotoxicologue', 1.0)\\
-List of Bests: [('Écotoxicologue', 1.0, ('competency_match: ', 5), ('subcompetency_match:', 6)), ('Spécialiste en cosmétovigilance', 1.0, ('competency_match: ', 5), ('subcompetency_match:', 3)), \\
-("Chargé d'études statistiques", 0.7975815245288584, ('competency_match: ', 4), ('subcompetency_match:', 0)), ('Ergonome logiciel', 0.7975815245288584, ('competency_match: ', 4), ('subcompetency_match:', 0)), \\
+Entry : 'Toxicologue industriel' 
+Results : 
+Best : ('Écotoxicologue', 1.0)
+List of Bests: [('Écotoxicologue', 1.0, ('competency_match: ', 5), ('subcompetency_match:', 6)), ('Spécialiste en cosmétovigilance', 1.0, ('competency_match: ', 5), ('subcompetency_match:', 3)), 
+("Chargé d'études statistiques", 0.7975815245288584, ('competency_match: ', 4), ('subcompetency_match:', 0)), ('Ergonome logiciel', 0.7975815245288584, ('competency_match: ', 4), ('subcompetency_match:', 0)), 
 ('Chef de projet', 0.7781211446285499, ('competency_match: ', 4), ('subcompetency_match:', 0))], 0.0)]
 
 # -- Machine Learning Techniques : skills_ml
