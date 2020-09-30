@@ -6,10 +6,6 @@ Created on Mon Jul 15 14:45:03 2019
 """
 
 
-###
-### DISCLAIMER : This is one of my first computer science projects. It works but the syntax can get quite confused sometimes (variable names for instance), and it lacks in explanations.
-###
-
 #%% Packages
 import numpy as np
 import matplotlib.pyplot as plt
