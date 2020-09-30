@@ -4,17 +4,19 @@
 I made a job matching algorithm for xLearn. 
 This algorithm uses a database they developed (data_clean.json).
 An entry looks like something like this:
-	{
-	  "key_shared_job": 0,
-	  "Secteur": "Numérique",
-	  "Famille": "Mise en production / Exploitation Probatoire",
-	  "Métier": "Administrateur bases de données",
-	  "Description": "L'Administrateur bases de données conçoit, gère et administre les systèmes de gestion de données de l'entreprise, en assure la cohérence, la qualité et la sécurité. Concevoir et spécifier les paramètres et l'architecture de la base de données en lien avec l'architecte SI (structure, paramètres, modélisation)\nAdministrer la base de données (suivi de la qualité des données, suivi du niveau de service, gestion des accès utilisateurs et de la sécurité)\nGérer les évolutions, migrations et back up dont la recette.\nMettre à jour les documents d'exploitation\nAssurer un support technique aux utilisateurs et aux équipes de développement\nGarantir auprès des utilisateurs internes et externes la confidentialité, l'intégrité et la disponibilité des donnéesAssurer une veille technique .",
-	  "Compétence": "Architecture technique SI",
-	  "Sous-compétences": "Analyser les acteurs et outils (matériel ou logiciel) du marché",
-	  "key_competency": "0",
-	  "key_sub-competency": "1"
-	}
+'''
+{
+  "key_shared_job": 0,
+  "Secteur": "Numérique",
+  "Famille": "Mise en production / Exploitation Probatoire",
+  "Métier": "Administrateur bases de données",
+  "Description": "L'Administrateur bases de données conçoit, gère et administre les systèmes de gestion de données de l'entreprise, en assure la cohérence, la qualité et la sécurité. Concevoir et spécifier les paramètres et l'architecture de la base de données en lien avec l'architecte SI (structure, paramètres, modélisation)\nAdministrer la base de données (suivi de la qualité des données, suivi du niveau de service, gestion des accès utilisateurs et de la sécurité)\nGérer les évolutions, migrations et back up dont la recette.\nMettre à jour les documents d'exploitation\nAssurer un support technique aux utilisateurs et aux équipes de développement\nGarantir auprès des utilisateurs internes et externes la confidentialité, l'intégrité et la disponibilité des donnéesAssurer une veille technique .",
+  "Compétence": "Architecture technique SI",
+  "Sous-compétences": "Analyser les acteurs et outils (matériel ou logiciel) du marché",
+  "key_competency": "0",
+  "key_sub-competency": "1"
+}
+'''
 As you can notice, a job has some competencies and some sub-competencies.
 To match jobs we relied on the following assumption: "two jobs are close to each other if they have a lot of competencies and sub-competencies in common".
 It allowed us to create a metric that tells how close is one job to another. I thought using AI techniques for this problem would have been overkill, since this metric provides very good results.
