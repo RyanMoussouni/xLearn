@@ -3,7 +3,7 @@
 
 I made a job matching algorithm for xLearn. 
 This algorithm uses a database they developed (data_clean.json).
-An entry looks like something like this:
+An entry looks like something like this: \\
 '''
 {
   "key_shared_job": 0,
